@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "server" : "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "truffle": "^5.4.11",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.5.2"
+  }
+}
