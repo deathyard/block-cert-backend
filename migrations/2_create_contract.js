@@ -1,7 +1,7 @@
-// var SimpleStorage = artifacts.require("./SimpleStorage.sol");
-var HashStorage = artifacts.require("./HashStorage.sol");
+const Certificates = artifacts.require("Certificates");
+const User = artifacts.require("Users")
 
-module.exports = function(deployer) {
-  // deployer.deploy(SimpleStorage);
-  deployer.deploy(HashStorage);
-};
+module.exports = function (deployer) {
+  deployer.deploy(Certificates);
+  // deployer.
+}

@@ -1,0 +1,236 @@
+truffle(development)> e.registerIssuer("sdasdashgjsa", {from:"0x6Ae92aD0eFC9B65e1564a2D3B6664Fc385A41601"})
+{
+  tx: '0xd0b473aa33dfa16a11aa9f162066b226629b7477da0c6cb20352962acd9d0648',
+  receipt: {
+    transactionHash: '0xd0b473aa33dfa16a11aa9f162066b226629b7477da0c6cb20352962acd9d0648',
+    transactionIndex: 0,
+    blockHash: '0xdbba885b03dc81c0132596ffda92ac0c2f9041d7607db94abd5b01bda3b46681',
+    blockNumber: 9,
+    from: '0x6ae92ad0efc9b65e1564a2d3b6664fc385a41601',
+    to: '0xbf54fda07958cca622fb730fe1bf803c5934ebd5',
+    gasUsed: 67719,
+    cumulativeGasUsed: 67719,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000020000000000000000020010000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000800000000000000000000000000000000000000000000000000000000000000020000000000000000',        
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0xd0b473aa33dfa16a11aa9f162066b226629b7477da0c6cb20352962acd9d0648',
+      blockHash: '0xdbba885b03dc81c0132596ffda92ac0c2f9041d7607db94abd5b01bda3b46681',
+      blockNumber: 9,
+      address: '0xBf54FdA07958CCa622fb730Fe1bF803C5934ebd5',
+      type: 'mined',
+      id: 'log_5ffdb48d',
+      event: 'IssuerRegistered',
+      args: [Result]
+    }
+  ]
+}
+
+truffle(development)> await e.registerRecipient("sdasdasdasdasdas")
+{
+  tx: '0xb7e327b4678710fcfe10d1ec9f15f05549ccdef480213139696c56ed59f43033',
+  receipt: {
+    transactionHash: '0xb7e327b4678710fcfe10d1ec9f15f05549ccdef480213139696c56ed59f43033',
+    transactionIndex: 0,
+    blockHash: '0xe9212562b23c6d58828d085c47a530a4227a550d66d3ad0aa245b40c7ea82cce',
+    blockNumber: 10,
+    from: '0xc9d25aea6836beb768993f17b7d89c53e0dd899d',
+    to: '0xbf54fda07958cca622fb730fe1bf803c5934ebd5',
+    gasUsed: 67744,
+    cumulativeGasUsed: 67744,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000020000000000000000000000000000000000000000000008000000000000002000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000200004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000',        
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0xb7e327b4678710fcfe10d1ec9f15f05549ccdef480213139696c56ed59f43033',
+      blockHash: '0xe9212562b23c6d58828d085c47a530a4227a550d66d3ad0aa245b40c7ea82cce',
+      blockNumber: 10,
+      address: '0xBf54FdA07958CCa622fb730Fe1bF803C5934ebd5',
+      type: 'mined',
+      id: 'log_07d5b1d3',
+      event: 'RecipientRegistered',
+      args: [Result]
+    }
+  ]
+}
+
+truffle(development)> await e.registerCertificate("Hello from ipfs")
+Uncaught:
+Error: Returned error: VM Exception while processing transaction: revert Issuer not registered to register a certificate -- Reason given: Issuer not registered to register a certificate.
+    at evalmachine.<anonymous>:1:11
+    at evalmachine.<anonymous>:2:49
+    at sigintHandlersWrap (vm.js:273:12)
+    at Script.runInContext (vm.js:142:14)
+    at runScript (C:\Users\vipul\AppData\Roaming\npm\node_modules\truffle\build\webpack:\packages\core\lib\console.js:364:1)
+    at Console.interpret (C:\Users\vipul\AppData\Roaming\npm\node_modules\truffle\build\webpack:\packages\core\lib\console.js:379:1)
+    at bound (domain.js:416:15)
+    at REPLServer.runBound [as eval] (domain.js:427:12)
+    at REPLServer.onLine (repl.js:821:10)
+    at REPLServer.emit (events.js:400:28)
+    at REPLServer.emit (domain.js:470:12)
+    at REPLServer.Interface._onLine (readline.js:364:10)
+    at REPLServer.Interface._line (readline.js:700:8)
+    at REPLServer.Interface._ttyWrite (readline.js:1045:14)
+    at REPLServer.self._ttyWrite (repl.js:914:9)
+    at ReadStream.onkeypress (readline.js:235:10)
+    at ReadStream.emit (events.js:400:28)
+    at ReadStream.emit (domain.js:470:12)
+    at emitKeys (internal/readline/utils.js:358:14)
+    at emitKeys.next (<anonymous>) {
+  data: {
+    '0x66975f7b5e5f87bb262bbc4b8984ff511a932b3d16b3dc1843ee472aa5bd0073': {
+      error: 'revert',
+      program_counter: 2647,
+      return: '0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002f497373756572206e6f74207265676973746572656420746f20726567697374657220612063657274696669636174650000000000000000000000000000000000',
+      reason: 'Issuer not registered to register a certificate'
+    },
+    stack: 'RuntimeError: VM Exception while processing transaction: revert Issuer not registered to register a certificate\n' +
+      '    at Function.RuntimeError.fromResults (C:\\Program Files\\WindowsApps\\GanacheUI_2.5.4.0_x64__5dg5pnz03psnj\\app\\resources\\static\\node\\node_modules\\ganache-core\\lib\\utils\\runtimeerror.js:94:13)\n' +
+      '    at BlockchainDouble.processBlock (C:\\Program Files\\WindowsApps\\GanacheUI_2.5.4.0_x64__5dg5pnz03psnj\\app\\resources\\static\\node\\node_modules\\ganache-core\\lib\\blockchain_double.js:627:24)\n' +
+      '    at runMicrotasks (<anonymous>)\n' +
+      '    at processTicksAndRejections (internal/process/task_queues.js:93:5)',
+    name: 'RuntimeError'
+  },
+  reason: 'Issuer not registered to register a certificate',
+  hijackedStack: 'Error: Returned error: VM Exception while processing transaction: revert Issuer not registered to register a certificate -- Reason given: Issuer not registered to register a certificate.\n' +
+    '    at Object.ErrorResponse (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\web3-core-helpers\\lib\\errors.js:28:1)\n' +       
+    '    at C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\web3\\node_modules\\web3-core-requestmanager\\lib\\index.js:302:1\n' +   
+    '    at C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\packages\\provider\\wrapper.js:107:1\n' +
+    '    at XMLHttpRequest.request.onreadystatechange (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\web3\\node_modules\\web3-providers-http\\lib\\index.js:98:1)\n' +
+    '    at XMLHttpRequestEventTarget.dispatchEvent (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\xhr2-cookies\\dist\\xml-http-request-event-target.js:34:1)\n' +
+    '    at XMLHttpRequest.exports.modules.996763.XMLHttpRequest._setReadyState (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:208:1)\n' +
+    '    at XMLHttpRequest.exports.modules.996763.XMLHttpRequest._onHttpResponseEnd (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:318:1)\n' +
+    '    at IncomingMessage.<anonymous> (C:\\Users\\vipul\\AppData\\Roaming\\npm\\node_modules\\truffle\\build\\webpack:\\node_modules\\xhr2-cookies\\dist\\xml-http-request.js:289:47)\n' +
+    '    at IncomingMessage.emit (events.js:412:35)\n' +
+    '    at IncomingMessage.emit (domain.js:532:15)\n' +
+    '    at endReadableNT (internal/streams/readable.js:1317:12)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:82:21)'
+}
+
+truffle(development)> await e.registerCertificate("Hello from ipfs", {from:"0x6Ae92aD0eFC9B65e1564a2D3B6664Fc385A41601"})
+{
+  tx: '0xae4ac59a2b947c935550a6334489e16070920823f6b66c9cd752a632fd2faf30',
+  receipt: {
+    transactionHash: '0xae4ac59a2b947c935550a6334489e16070920823f6b66c9cd752a632fd2faf30',
+    transactionIndex: 0,
+    blockHash: '0xfb343b9547f7e985545f6cbafd7c771e5f5d708ea1570356720dcd6552ef1333',
+    blockNumber: 12,
+    from: '0x6ae92ad0efc9b65e1564a2d3b6664fc385a41601',
+    to: '0xbf54fda07958cca622fb730fe1bf803c5934ebd5',
+    gasUsed: 46629,
+    cumulativeGasUsed: 46629,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000020010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000800000000000000000000000000000000000000000000000000000000000000020000020000000000',        
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0xae4ac59a2b947c935550a6334489e16070920823f6b66c9cd752a632fd2faf30',
+      blockHash: '0xfb343b9547f7e985545f6cbafd7c771e5f5d708ea1570356720dcd6552ef1333',
+      blockNumber: 12,
+      address: '0xBf54FdA07958CCa622fb730Fe1bF803C5934ebd5',
+      type: 'mined',
+      id: 'log_de0be76b',
+      event: 'CertificateRegistered',
+      args: [Result]
+    }
+  ]
+}
+
+truffle(development)> await e.issueCertificate("0xC9d25aeA6836BEB768993F17b7D89C53E0dD899D", "Hello from ipfs", {from:"0x6Ae92aD0eFC9B65e1564a2D3B6664Fc385A41601"})
+{
+  tx: '0xcca538a9438a984ad6ff52790310720993cf617675a9f575f2670d91fcccca23',
+  receipt: {
+    transactionHash: '0xcca538a9438a984ad6ff52790310720993cf617675a9f575f2670d91fcccca23',
+    transactionIndex: 0,
+    blockHash: '0x5b21688f8c391aaa19355e816f26a17142e9fe65325e189a52ba303ea732c9f0',
+    blockNumber: 13,
+    from: '0x6ae92ad0efc9b65e1564a2d3b6664fc385a41601',
+    to: '0xbf54fda07958cca622fb730fe1bf803c5934ebd5',
+    gasUsed: 255896,
+    cumulativeGasUsed: 255896,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000020010040000000000000000000000000000000000000000000000040000004000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000001000000000000000000800020000000040000000000000000000000000000000000000000000000000020800000000000000',        
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0xcca538a9438a984ad6ff52790310720993cf617675a9f575f2670d91fcccca23',
+      blockHash: '0x5b21688f8c391aaa19355e816f26a17142e9fe65325e189a52ba303ea732c9f0',
+      blockNumber: 13,
+      address: '0xBf54FdA07958CCa622fb730Fe1bF803C5934ebd5',
+      type: 'mined',
+      id: 'log_dfb0807e',
+      event: 'CertificateIssued',
+      args: [Result]
+    }
+  ]
+}
+
+truffle(development)> await e.getIssuerOfCertificate("Hello from ipfs")
+'0x6Ae92aD0eFC9B65e1564a2D3B6664Fc385A41601'
+
+truffle(development)> await e.getRecipientCertificates("0xC9d25aeA6836BEB768993F17b7D89C53E0dD899D")
+[
+  BN {
+    negative: 0,
+    words: [ 1, <1 empty item> ],
+    length: 1,
+    red: null
+  }
+]
+
+truffle(development)> await e.getCertificateIdentifier(1)
+Result {
+  '0': 'Hello from ipfs',
+  '1': BN {
+    negative: 0,
+    words: [ 21757454, 24, <1 empty item> ],
+    length: 2,
+    red: null
+  },
+  '2': '0x6Ae92aD0eFC9B65e1564a2D3B6664Fc385A41601',
+  '3': '0xC9d25aeA6836BEB768993F17b7D89C53E0dD899D'
+}
+
+truffle(development)> let res = await e.getCertificateIdentifier(1)
+undefined
+
+truffle(development)> res[1].toNumber()
+1632370190
+
+truffle(development)> let certs = await e.getRecipientCertificates("0xC9d25aeA6836BEB768993F17b7D89C53E0dD899D")
+undefined
+
+truffle(development)> certs
+[
+  BN {
+    negative: 0,
+    words: [ 1, <1 empty item> ],
+    length: 1,
+    red: null
+  }
+]
+
+truffle(development)> certs.toString()
+'1'
