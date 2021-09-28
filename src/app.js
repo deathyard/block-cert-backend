@@ -3,7 +3,7 @@ const App = {
   web3Provider: null,
   contracts: {},
   accounts: ['0x0'],
-
+  
   initWeb3: async function () {
     console.log('initWeb3');
     const provider = await detectEthereumProvider();
@@ -36,6 +36,35 @@ const App = {
     })
   }
 }
+
+// META-MASK DEFAULT WEB3 CONFIG
+
+window.addEventListener('load', async () => {
+  // Modern dapp browsers...
+  if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      try {
+          // Request account access if needed
+          await ethereum.enable();
+          // Acccounts now exposed
+          web3.eth.sendTransaction({/* ... */});
+      } catch (error) {
+          // User denied account access...
+      }
+  }
+  // Legacy dapp browsers...
+  else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      // Acccounts always exposed
+      web3.eth.sendTransaction({/* ... */});
+  }
+  // Non-dapp browsers...
+  else {
+      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+  }
+});
+
+// CONFIG ENDS
 
 $(window).load(function () {
   App.ethereumButton = document.getElementById('enableEthereumButton');
